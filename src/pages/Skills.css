@@ -1,0 +1,349 @@
+.skills-section {
+  padding: 70px 0;
+  position: relative;
+  overflow: hidden;
+
+}
+
+.skills-section::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  opacity: 0.3;
+  background-color: black;
+}
+
+body.light .skills-section::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  opacity: 0.3;
+  background-color: #f5f5f5;
+}
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 20px;
+  position: relative;
+  z-index: 1;
+}
+
+.section-title {
+  text-align: center;
+  font-size: 2.2rem;
+  margin-bottom: 10px;
+  color: white;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+}
+
+.section-subtitle {
+  text-align: center;
+  margin-bottom: 50px;
+  color: #e53e3e;
+  font-size: 1rem;
+  font-weight: 300;
+  letter-spacing: 1px;
+}
+
+body.light .section-subtitle {
+  text-align: center;
+  margin-bottom: 50px;
+  color: #e53e3e;
+  font-size: 1rem;
+  font-weight: 300;
+  letter-spacing: 1px;
+}
+
+.skills-container {
+  display: flex;
+  gap: 25px;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+.skills-category {
+  flex: 1;
+  min-width: 280px;
+  max-width: 350px;
+  padding: 25px;
+  min-height: 380px;
+  border-radius: 12px;
+  background: rgba(30, 30, 30, 0.7);
+  backdrop-filter: blur(8px);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  transition: all 0.3s ease;
+}
+body.light .skills-category {
+  flex: 1;
+  min-width: 280px;
+  max-width: 350px;
+  padding: 25px;
+  min-height: 380px;
+  border-radius: 12px;
+  background: #f5f5f5; /* blanc */
+  backdrop-filter: blur(8px);
+  border: 1px solid rgba(0, 0, 0, 0.1); /* border gris léger pour contraste */
+  transition: all 0.3s ease;
+}
+
+
+.skills-category:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 8px 20px rgba(229, 62, 62, 0.2);
+}
+
+.skills-title {
+  font-size: 1.3rem;
+  margin-bottom: 20px;
+  color: white;
+  text-align: center;
+  position: relative;
+  padding-bottom: 8px;
+}
+body.light .skills-title {
+  font-size: 1.3rem;
+  margin-bottom: 20px;
+  color: black;
+  text-align: center;
+  position: relative;
+  padding-bottom: 8px;
+}
+
+.skills-title::after {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 50px;
+  height: 2px;
+  background: #e53e3e;
+}
+
+.skills-list {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  overflow: hidden;
+}
+
+.skill-item {
+  margin-bottom: 8px;
+}
+
+.skill-info {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 6px;
+  align-items: center;
+}
+
+.skill-info span {
+  font-size: 0.9rem;
+  color: white;
+}
+ body.light .skill-info span {
+  font-size: 0.9rem;
+  color: black;
+}
+
+.skill-info span:first-child {
+  font-weight: 500;
+}
+
+.skill-info span:last-child {
+  color: #e53e3e;
+  font-weight: 600;
+}
+
+.skill-bar {
+  height: 5px;
+  background: rgba(255, 255, 255, 0.1);
+  border-radius: 5px;
+  overflow: hidden;
+  position: relative;
+}
+ body.light .skill-bar {
+  height: 5px;
+  background: rgba(152, 12, 12, 0.1);
+  border-radius: 5px;
+  overflow: hidden;
+  position: relative;
+}
+
+.skill-progress {
+  height: 100%;
+  background: #e53e3e;
+  border-radius: 5px;
+  position: relative;
+}
+
+.skill-progress::after {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: linear-gradient(90deg, 
+              rgba(255, 255, 255, 0.1) 0%, 
+              rgba(255, 255, 255, 0.3) 50%, 
+              rgba(255, 255, 255, 0.1) 100%);
+  background-size: 200% 100%;
+  animation: shimmer 2s infinite;
+  border-radius: 5px;
+}
+
+.skills-title-toggle {
+  cursor: pointer;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px;
+  border-radius: 8px;
+  transition: background-color 0.2s ease;
+}
+
+
+
+.toggle-icon {
+  font-size: 0.9rem;
+  color: #e53e3e;
+  transition: transform 0.3s ease;
+}
+
+@keyframes shimmer {
+  0% { background-position: -200% 0; }
+  100% { background-position: 200% 0; }
+}
+
+/* Styles pour les catégories repliées */
+.skills-category.collapsed {
+  padding: 0;
+  background: transparent;
+  backdrop-filter: none;
+  border: none;
+  min-height: auto;
+  box-shadow: none;
+}
+ body.light .skills-category.collapsed {
+  padding: 0;
+  background: transparent;
+  backdrop-filter: none;
+  border: none;
+  min-height: auto;
+  box-shadow: none;
+}
+
+
+.skills-category.collapsed .skills-title-toggle {
+  background: rgba(30, 30, 30, 0.7);
+  border-radius: 8px;
+  padding: 15px 20px;
+  border: 1px solid rgba(255, 255, 255, 0.1);
+}
+body.light .skills-category.collapsed .skills-title-toggle {
+  background: #f5f5f5; /* fond clair pour light mode */
+  border-radius: 8px;
+  padding: 15px 20px;
+  border: 1px solid rgba(0, 0, 0, 0.1); /* léger contour pour contraste */
+}
+
+/* Responsive design */
+@media (max-width: 992px) {
+  .skills-container {
+    gap: 20px;
+  }
+  
+  .skills-category {
+    min-width: 250px;
+    min-height: 360px;
+  }
+}
+
+@media (max-width: 768px) {
+  .skills-section {
+    padding: 60px 0;
+  }
+  
+  .section-title {
+    font-size: 2rem;
+  }
+  
+  .skills-category:not(.collapsed) {
+    padding: 20px;
+    min-height: 340px;
+  }
+  .mobile-header{
+   height: 48px !important;
+  }
+}
+
+@media (max-width: 576px) {
+  .section-title {
+    font-size: 1.8rem;
+  }
+  
+  .section-subtitle {
+    font-size: 0.9rem;
+    margin-bottom: 40px;
+  }
+  
+  .skills-category {
+    min-width: 100%;
+  }
+  
+  .skills-category:not(.collapsed) {
+    min-height: auto;
+  }
+  
+  .skill-info span {
+    font-size: 0.85rem;
+  }
+}
+
+
+
+.theme-icon {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.theme-icon img {
+  width: 30px;
+  height: 30px;
+}
+.theme-icon img,
+.theme-switcher-mobile img {
+  width: 30px;
+  height: 30px;
+  object-fit: contain;
+  transition: transform 0.3s ease, opacity 0.3s ease;
+}
+
+/* 🔹 Ajustement automatique sur petits écrans */
+@media (max-width: 768px) {
+  .theme-icon img,
+  .theme-switcher-mobile img {
+    width: 24px;
+    height: 24px;
+  }
+}
+
+@media (max-width: 480px) {
+  .theme-icon img,
+  .theme-switcher-mobile img {
+    width: 24px;
+    height: 24px;
+  }
+ 
+}

@@ -1,0 +1,481 @@
+.contact-section {
+  padding: 100px 0;
+  position: relative;
+  overflow: hidden;
+  color: black;
+}
+
+.contact-section::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  opacity: 0.3;
+}
+
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 20px;
+  position: relative;
+  z-index: 1;
+}
+
+.section-title {
+  text-align: center;
+  font-size: 2.8rem;
+  margin-bottom: 15px;
+  color: white;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+}
+
+/* Version Light */
+body.light .section-title {
+ text-align: center;
+  font-size: 2.8rem;
+  margin-bottom: 15px;
+  color: black;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+}
+
+.section-subtitle {
+  text-align: center;
+  margin-bottom: 70px;
+  color: #e53e3e;
+  font-size: 1.2rem;
+  font-weight: 300;
+  letter-spacing: 1px;
+}
+
+body.light .section-subtitle {
+   text-align: center;
+  margin-bottom: 70px;
+   background: linear-gradient(45deg, #ce0b0b, #aa261c);
+  -webkit-background-clip: text; /* rend le dégradé visible dans le texte */
+  -webkit-text-fill-color: transparent; /* rend le texte transparent pour voir le dégradé */
+  font-size: 1.2rem;
+  font-weight: 300;
+  letter-spacing: 1px;
+}
+
+.contact-container {
+  display: flex;
+  gap: 40px;
+  justify-content: center;
+}
+
+.contact-info, .contact-form {
+  flex: 1;
+  max-width: 500px;
+  padding: 40px;
+  border-radius: 15px;
+  background: rgba(30, 30, 30, 0.7);
+  backdrop-filter: blur(10px);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  color: white;
+}
+
+/* Version Light */
+body.light .contact-info,
+body.light .contact-form {
+  background: rgba(255, 255, 255, 0.9);
+  border: 1px solid rgba(0, 0, 0, 0.1);
+  color: #333;
+}
+
+.contact-info:hover, .contact-form:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 10px 25px rgba(229, 62, 62, 0.2);
+}
+
+.contact-title {
+  font-size: 1.6rem;
+  margin-bottom: 30px;
+  color: white;
+  position: relative;
+  padding-bottom: 15px;
+}
+
+/* Version Light */
+body.light .contact-title {
+  color: #1a1a1a;
+}
+
+.contact-title::after {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 60px;
+  height: 3px;
+  background: #e53e3e;
+}
+
+.info-item {
+  display: flex;
+  align-items: center;
+  margin-bottom: 25px;
+}
+
+.info-icon {
+  width: 50px;
+  height: 50px;
+  background: rgba(229, 62, 62, 0.1);
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-right: 20px;
+  color: #e53e3e;
+  font-size: 1.2rem;
+}
+
+.info-content h4 {
+  color: white;
+  font-size: 1.1rem;
+  margin-bottom: 5px;
+  font-weight: 500;
+}
+
+/* Version Light */
+body.light .info-content h4 {
+  color: #1a1a1a;
+}
+
+.info-content p {
+  color: #aaa;
+  font-size: 1rem;
+  margin: 0;
+}
+
+/* Version Light */
+body.light .info-content p {
+  color: #666;
+}
+
+.social-links {
+  display: flex;
+  gap: 15px;
+  margin-top: 30px;
+}
+
+.social-link {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  background: rgba(229, 62, 62, 0.1);
+  color: #e53e3e;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: all 0.3s ease;
+  text-decoration: none;
+}
+
+.social-link:hover {
+  background: #e53e3e;
+  color: white;
+  transform: translateY(-3px);
+}
+.fab{
+  color: white;
+}
+
+.form-group {
+  margin-bottom: 25px;
+}
+
+.form-input, .form-textarea {
+  width: 100%;
+  padding: 12px 15px;
+  background: rgba(255, 255, 255, 0.05);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  border-radius: 8px;
+  color: white;
+  font-size: 1rem;
+  transition: all 0.3s ease;
+}
+
+/* Version Light */
+body.light .form-input,
+body.light .form-textarea {
+  background: rgba(0, 0, 0, 0.05);
+  border: 1px solid rgba(0, 0, 0, 0.1);
+  color: #333;
+}
+
+.form-input::placeholder, .form-textarea::placeholder {
+  color: #aaa;
+}
+
+/* Version Light */
+body.light .form-input::placeholder,
+body.light .form-textarea::placeholder {
+  color: #888;
+}
+
+.form-input:focus, .form-textarea:focus {
+  outline: none;
+  border-color: #e53e3e;
+  box-shadow: 0 0 0 2px rgba(229, 62, 62, 0.2);
+}
+
+.form-textarea {
+  resize: vertical;
+  min-height: 120px;
+}
+
+.submit-btn {
+  background: linear-gradient(45deg, #ce0b0b, #aa261c);
+  color: white;
+  border: none;
+  padding: 12px 30px;
+  border-radius: 8px;
+  font-size: 1rem;
+  font-weight: 500;
+  cursor: pointer;
+  display: inline-flex;
+  align-items: center;
+  transition: all 0.3s ease;
+  width: 100%;
+  justify-content: center;
+  text-decoration: none;
+}
+
+.submit-btn i {
+  margin-left: 10px;
+}
+
+.submit-btn:hover {
+  background: linear-gradient(45deg, #ce0b0b, #aa261c);
+  transform: translateY(-3px);
+  box-shadow: 0 5px 15px rgba(229, 62, 62, 0.3);
+}
+
+.form-status {
+  text-align: center;
+  margin-top: 20px;
+  font-size: 0.9rem;
+}
+
+/* Styles pour mobile */
+@media (max-width: 576px) {
+  .info-item {
+    display: flex;
+    align-items: flex-start;
+    margin-bottom: 15px;
+  }
+
+  .info-icon {
+    margin-right: 8px;
+    color: #e53e3e;
+    font-size: 16px;
+    min-width: 20px;
+    text-align: center;
+  }
+
+  .info-content {
+    flex: 1;
+  }
+
+  .info-label {
+    display: block;
+    color: #e53e3e;
+    font-size: 0.85rem;
+    text-transform: uppercase;
+    margin-bottom: 2px;
+    font-weight: 500;
+  }
+
+  .info-content {
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+  }
+
+  /* Version Light pour les labels */
+  body.light .info-label {
+    color: #e53e3e;
+  }
+
+  .info-detail {
+    display: inline-block;
+    color: white;
+    text-decoration: none;
+    cursor: pointer;
+    transition: color 0.3s ease;
+  }
+
+  /* Version Light pour les détails */
+  body.light .info-detail {
+    color: #333;
+  }
+
+  .info-detail .a {
+    display: inline-block;
+    color: white;
+    text-decoration: none;
+    cursor: pointer;
+    transition: color 0.3s ease;
+  }
+
+  /* Version Light pour les liens */
+  body.light .info-detail .a {
+    color: #333;
+  }
+
+  .info-detail .a:hover {
+    color: #ff4d4d;
+    text-decoration: underline;
+  }
+
+  /* Version Light pour le hover des liens */
+  body.light .info-detail .a:hover {
+    color: #e53e3e;
+  }
+
+  .contact-info, .contact-form {
+    padding: 20px;
+  }
+
+  .section-title {
+    font-size: 1.8rem;
+  }
+
+  .section-subtitle {
+    font-size: 1rem;
+  }
+  body.light  .section-subtitle {
+    font-size: 1rem;
+  }
+
+  body.light .section-title {
+    font-size: 1.8rem;
+  }
+
+  body.dark .section-title{
+    font-size: 1.8rem;
+
+  }
+
+  .form-input,
+  .form-textarea {
+    font-size: 0.95rem;
+    padding: 10px 12px;
+    width: 100%;
+    max-width: 100%;
+    box-sizing: border-box;
+  }
+
+  .submit-btn {
+    font-size: 0.95rem;
+    padding: 10px 20px;
+  }
+
+  .form-group {
+    margin-bottom: 20px;
+  }
+}
+
+/* Styles pour le statut du formulaire */
+.form-status {
+  position: relative;
+  padding: 10px 15px;
+  margin-top: 15px;
+  border-radius: 5px;
+  font-size: 0.9rem;
+}
+
+.form-status.success {
+  background-color: rgba(40, 167, 69, 0.2);
+  color: #28a745;
+  border: 1px solid #28a745;
+}
+
+.form-status.error {
+  background-color: rgba(220, 53, 69, 0.2);
+  color: #dc3545;
+  border: 1px solid #dc3545;
+}
+
+.close-status {
+  position: absolute;
+  right: 10px;
+  top: 50%;
+  transform: translateY(-50%);
+  background: none;
+  border: none;
+  color: inherit;
+  cursor: pointer;
+  font-size: 1.2rem;
+  line-height: 1;
+}
+
+.info-label {
+  color: white;
+}
+
+/* Version Light pour les labels principaux */
+body.light .info-label {
+  color: #cbd5e1;
+}
+
+.a {
+  display: inline-block;
+  color: white;
+  text-decoration: none;
+  cursor: pointer;
+  transition: color 0.3s ease;
+}
+
+/* Version Light pour les liens généraux */
+body.light .a {
+  color: #333;
+}
+
+.ab {
+  color: white;
+  text-decoration: none;
+  cursor: pointer;
+  transition: color 0.3s ease;
+}
+
+/* Version Light pour les liens avec classe ab */
+body.light .ab {
+  color: #333;
+}
+
+/* Responsive design général */
+@media (max-width: 992px) {
+  .contact-container {
+    flex-direction: column;
+    align-items: center;
+    gap: 30px;
+  }
+  
+  .contact-info, .contact-form {
+    width: 100%;
+    max-width: 600px;
+  }
+}
+
+@media (max-width: 768px) {
+  .contact-section {
+    padding: 80px 0;
+  }
+  
+  .section-title {
+    font-size: 2.2rem;
+  }
+  
+  .contact-info, .contact-form {
+    padding: 30px;
+  }
+}
