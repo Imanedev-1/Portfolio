@@ -8,7 +8,7 @@ Bienvenue sur mon **portfolio personnel**, un espace où je présente mes projet
 ---
 
 ## 🌟 À propos
-Ce portfolio a été conçu pour mettre en valeur mon parcours et mes réalisations en développement **Front-End**.  
+Ce portfolio a été conçu pour mettre en valeur mon parcours et mes réalisations .  
 Il reflète mon style, mon sens du design et mon envie de créer des interfaces claires, modernes et responsives.
 
 ---
